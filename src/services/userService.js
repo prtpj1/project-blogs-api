@@ -4,7 +4,9 @@ const passwordHashing = require('./passwordService');
 const jwt = require('./jwtService');
 
 const getAllUsers = async () => {
-  const users = await User.findAll();
+  const users = await User.findAll(
+    { attributes: { exclude: ['password'] } },
+  );
   return users;
 };
 

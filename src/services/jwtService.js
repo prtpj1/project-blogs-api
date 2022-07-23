@@ -10,18 +10,17 @@ const createToken = (user) => {
   return newToken;
 };
 
-const validateToken = (token) => {
+const verifyToken = (token) => {
   try {
     const { data } = jwt.verify(token, process.env.JWT_SECRET);
+    
     return data;
-  } catch (err) {
-    const error = new Error('Invalid Token');
-    error.name = 'UnauthorizedError';
-    throw error;
+  } catch (error) {
+    return new Error('Expired or invalid token');
   }
 };
 
 module.exports = {
   createToken,
-  validateToken,
+  verifyToken,
 };

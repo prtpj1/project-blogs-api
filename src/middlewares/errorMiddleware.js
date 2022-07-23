@@ -3,7 +3,8 @@ const errorMessages = {
   nameInvalid: '"displayName" length must be at least 8 characters long',
   passwordInvalid: '"password" length must be at least 6 characters long',
   userExist: 'User already registered',
-  tokenInvalid: 'Invalid token',
+  tokenInvalid: 'Expired or invalid token',
+  tokenNotFound: 'Token not found',
 };
 
 const errors = {
@@ -12,6 +13,7 @@ const errors = {
   passwordInvalid: 400,
   userExist: 409,
   tokenInvalid: 401,
+  tokenNotFound: 401,
 };
 const errorHandler = ({ name, _message }, _req, res, next) => {
       const status = errors[name];
