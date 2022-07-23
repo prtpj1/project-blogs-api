@@ -9,7 +9,7 @@ require('express-async-errors');
 
 app.use(express.json());
 
-app.use('/users', userRouter);
+app.use('/user', userRouter);
 app.use('/login', authRouter);
 app.use(errorHandler);
 

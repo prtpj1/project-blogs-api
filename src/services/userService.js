@@ -1,39 +1,54 @@
-// const Joi = require('joi');
-
+const Joi = require('joi');
 const { User } = require('../database/models');
 const passwordHashing = require('./passwordService');
+const jwt = require('./jwtService');
 
 const getAllUsers = async () => {
   const users = await User.findAll();
   return users;
 };
 
-const validateBody = (displayName, email, password) => {
-  if (displayName.length < 8) {
-    throw new Error('"displayName" length must be at least 8 characters long');
-  }
+  const schema = Joi.object({
+  displayName: Joi.string().min(8).required(),
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required(),
+  image: Joi.string(),
+});
 
-  const isValidEmail = email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-  if (!isValidEmail) {
-    throw new Error('"email" must be a valid email');
+const validateUser = (error) => {
+  if (error.message.includes('displayName')) {
+    const err = new Error();
+    err.name = 'nameInvalid';
+    throw err;
   }
-
-  if (password.length < 6) {
-    throw new Error('"password" length must be at least 6 characters long');
+  if (error.message.includes('email')) {
+    const err = new Error();
+    err.name = 'emailInvalid';
+    throw err;
+  }
+  if (error.message.includes('password')) {
+    const err = new Error();
+    err.name = 'passwordInvalid';
+    throw err;
   }
 };
 
 const createUser = async ({ displayName, email, password, image }) => {
-  validateBody({ displayName, email, password });
-  const passwordEncrypted = passwordHashing.encryptPassword(password);
-  const newUser = await User.create({
-    displayName,
-    email,
-    password: passwordEncrypted,
-    image,
-  });
+  const { error } = schema.validate({ displayName, email, password, image });
 
-  return newUser;
+  if (error) validateUser(error);
+
+  const user = await User.findOne({ where: { email } });
+  if (user) {
+    const err = new Error();
+    err.name = 'userExist';
+    throw err;
+  }
+  const passwordEncrypted = passwordHashing.encryptPassword(password);
+  const newUser = await User.create({ displayName, email, password: passwordEncrypted, image });
+  const token = jwt.createToken(newUser);
+
+  return { token };
 };
 
 module.exports = {
