@@ -10,6 +10,7 @@
 const createUserModel = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     id: {
+      allowNull: false,
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -27,8 +28,8 @@ const createUserModel = (sequelize, DataTypes) => {
 
   User.associate = (models) => {
     User.hasMany(models.BlogPost, {
-      foriegnKey: 'id',
-      as: 'blogPosts',
+      foriegnKey: 'userId',
+      as: 'blogPost',
     });
   };
 

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  /**
+    /**
    * 
    * @param {import('sequelize').queryInterface} queryInterface 
    * @param {import('sequelize').Sequelize} Sequelize 
@@ -13,16 +13,15 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
-    })
+    });
   },
-
-  down: async (queryInterface) => {
+  down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Categories');
   }
 };

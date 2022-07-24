@@ -26,6 +26,10 @@ const createBlogPostModel = (sequelize, DataTypes) => {
     userId: {
       allowNull: false,
       type: DataTypes.INTEGER,
+      references: {
+        model: 'User',
+        key: 'id',
+      }
     },
     published: {
       allowNull: false,
@@ -43,8 +47,8 @@ const createBlogPostModel = (sequelize, DataTypes) => {
 
   BlogPost.associate = (models) => {
     BlogPost.belongsTo(models.User, {
-      foriegnKey: 'userId',
       as: 'user',
+      foriegnKey: 'userId',
     });
   }
 

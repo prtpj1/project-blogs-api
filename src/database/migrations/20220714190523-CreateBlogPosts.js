@@ -33,10 +33,12 @@ module.exports = {
       },
       published: {
         allowNull: false,
+        defaultValue: Sequelize.fn('now'),
         type: Sequelize.DATE,
       },
       updated: {
         allowNull: false,
+        defaultValue: Sequelize.fn('now'),
         type: Sequelize.DATE,
       }
     })
