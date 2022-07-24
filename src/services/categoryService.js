@@ -13,6 +13,12 @@ const validateCategory = (error) => {
   }
 };
 
+const getAllCategories = async () => {
+  const categories = await Category.findAll();
+
+  return categories;
+};
+
 const createCategory = async ({ name }) => {
   const { error } = schema.validate({ name });
 
@@ -24,5 +30,6 @@ const createCategory = async ({ name }) => {
 };
 
 module.exports = {
+  getAllCategories,
   createCategory,
 };
