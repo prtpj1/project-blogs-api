@@ -1,6 +1,7 @@
 const errorMessages = {
   emailInvalid: '"email" must be a valid email',
   nameInvalid: '"displayName" length must be at least 8 characters long',
+  nameRequired: '"name" is required',
   passwordInvalid: '"password" length must be at least 6 characters long',
   userExist: 'User already registered',
   userNotExist: 'User does not exist',
@@ -11,6 +12,7 @@ const errorMessages = {
 const errors = {
   emailInvalid: 400,
   nameInvalid: 400,
+  nameRequired: 400,
   passwordInvalid: 400,
   userExist: 409,
   userNotExist: 404,

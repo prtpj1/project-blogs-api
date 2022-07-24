@@ -20,7 +20,7 @@ const createCategoryModel = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
   }, {
-		tableName: 'Category',
+		tableName: 'Categories',
 		timestamps: false,
     // underscored: true,
   });
