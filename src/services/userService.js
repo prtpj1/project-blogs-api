@@ -10,6 +10,19 @@ const getAllUsers = async () => {
   return users;
 };
 
+const getUserById = async (id) => {
+  const user = await User.findByPk(id, 
+    { attributes: { exclude: ['password'] } });
+
+    if (!user) {
+      const err = new Error();
+      err.name = 'userNotExist';
+      throw err;
+    }
+
+  return user;
+};
+
   const schema = Joi.object({
   displayName: Joi.string().min(8).required(),
   email: Joi.string().email().required(),
@@ -55,5 +68,6 @@ const createUser = async ({ displayName, email, password, image }) => {
 
 module.exports = {
   getAllUsers,
+  getUserById,
   createUser,
 };

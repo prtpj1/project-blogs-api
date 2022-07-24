@@ -3,6 +3,7 @@ const errorMessages = {
   nameInvalid: '"displayName" length must be at least 8 characters long',
   passwordInvalid: '"password" length must be at least 6 characters long',
   userExist: 'User already registered',
+  userNotExist: 'User does not exist',
   tokenInvalid: 'Expired or invalid token',
   tokenNotFound: 'Token not found',
 };
@@ -12,6 +13,7 @@ const errors = {
   nameInvalid: 400,
   passwordInvalid: 400,
   userExist: 409,
+  userNotExist: 404,
   tokenInvalid: 401,
   tokenNotFound: 401,
 };
