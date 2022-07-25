@@ -40,7 +40,7 @@ const createBlogPostModel = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
   }, {
-		tableName: 'BlogPosts',
+		// tableName: 'BlogPost',
 		timestamps: false,
     // underscored: true,
   });

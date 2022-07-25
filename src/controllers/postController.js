@@ -6,7 +6,7 @@ const getAllPosts = async (req, res, next) => {
 
     return res.status(200).json(posts);
   } catch (error) {
-    next(error);
+    return next(error);
   }
 };
 
