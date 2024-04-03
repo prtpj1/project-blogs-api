@@ -1,6 +1,10 @@
 const categoryService = require('../services/categoryService');
 
 const getAllCategories = async (req, res, next) => {
+  /* #swagger.security = [{
+            "apiKeyAuth": []
+    }] */
+  // #swagger.description = 'List all registered categories'
   try {
     const categories = await categoryService.getAllCategories();
 
@@ -10,6 +14,16 @@ const getAllCategories = async (req, res, next) => {
   }
 };
 const createCategory = async (req, res, next) => {
+  /* #swagger.security = [{
+            "apiKeyAuth": []
+    }] */
+  /*  #swagger.parameters['body'] = {
+            in: 'body',
+            description: 'Adds a new category to the database',
+            schema: {
+                "name": "Type the category name here"
+            }
+    } */
   try {
     const { name } = req.body;
     const newCategory = await categoryService.createCategory({ name });
