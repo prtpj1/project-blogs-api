@@ -98,7 +98,7 @@ With the project running, you can test the routes by clicking on the [Swagger](h
 1. Open the route `POST/user/` and click the `Try it out` button
 <img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_01.png?raw=true" alt="Example image to show how to authorize user using swagger" />
 
-2. Fill in the fields with the new user data (they don't have to be real data)
+2. Fill in the fields with the new user data (you don't need to use your real data)
 
 3. Click the `Execute` button
 <img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_02.png?raw=true" alt="Example image to show how to authorize user using swagger" />
