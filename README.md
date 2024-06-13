@@ -51,9 +51,7 @@ This is a NodeJS application that uses the Sequelize package to perform CRUD ope
 - ❌ Create the `GET post/search?q=:searchTerm` endpoint
 
 _*Note: In some projects, certain requirements were not completed due to the accelerated dynamics of the course, not because I didn't know how to do them. At the time, I just needed a little more time.*_
-
 _*I haven't decided yet whether to leave it this way to demonstrate my progress during my learning or to complete the missing requirements from the course projects.*_
-
 _*Feedback is welcome.*_
 
 <hr/>
@@ -69,8 +67,8 @@ _*Feedback is welcome.*_
 <hr/>
 
 ## How to run the application?
-- MySQL must be running on your machine
-- ⚠️ If you are on Windows, stop Windows' MySQL, as it will use MySQL from your Linux distro via WSL2
+- MySQL must be running on your machine <br>
+⚠️ If you are on Windows, stop Windows' MySQL, as it will use MySQL from your Linux distro via WSL2
 - Clone the repository: <br>
 `git clone git@github.com:prtpj1/project-blogs-api.git`
 - Access the project folder: <br>
@@ -94,20 +92,26 @@ _*Feedback is welcome.*_
 `npm start`
 
 With the project running, you can test the routes by clicking on the [Swagger](http://localhost:3000/api-docs/) link.
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Swagger_BlogsAPI.png?raw=true" alt="Swagger image" />
 ⚠️ **In this app, the route requires token authentication, which is done in the Swagger link above, but you need to follow the steps below:**
-1. Open the route `POST/user/` and click the `Try it out` button <br>
-2. Fill in the fields with the new user data (they don't have to be real data) <br>
-3. Click the `Execute` button <br>
-4. If everything went well, your user was created, you will see the `201` code and the authorization token was generated. <br>
+1. Open the route `POST/user/` and click the `Try it out` button
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_01.png?raw=true" alt="Example image to show how to authorize user using swagger" />
+2. Fill in the fields with the new user data (they don't have to be real data)
+3. Click the `Execute` button
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_02.png?raw=true" alt="Example image to show how to authorize user using swagger" />
+4. If everything went well, your user was created, you will see the `201` code and the authorization token was generated.
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_03.png?raw=true" alt="Example image to show how to authorize user using swagger" />
 The token should be something like this: 
 ```
     {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjo4LCJkaXNwbGF5TmFtZSI6IkZ1bGFubyBkYSBTaWx2YSIsImVtYWlsIjoiZnVsYW5vQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGh2elo2elE3eEtDLk1PZ2VKUjQ2RXV2Z3I2YmMyT2pLWnZkUnlNc2FrSUpISWMvN2VvUTEyIiwiaW1hZ2UiOiJ3d3cucGljdHVyZS5wbmcifSwiaWF0IjoxNzE4MzA5NDIwLCJleHAiOjE3MTgzOTU4MjB9.gRMp60cD1GSAZwGVaSsfSj2kVxt8_3ZydNvoCY3J22A"
     }
 ```
- If something goes wrong, the error code and message will be displayed below there _(name too short, password too short or not numeric, etc...)_ <br>
-5. Copy only the text between the quotes after `"token":`<br>
-6. At the top of the screen, click the `Authorize` button, in `Value` paste the token text you copied and click the `Authorize` button, then close the modal by clicking `Close`<br>
+ If something goes wrong, the error code and message will be displayed below there _(name too short, password too short or not numeric, etc...)_  
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_04.png?raw=true" alt="Example image to show how to authorize user using swagger" />
+
+5. Copy only the text between the quotes after `"token":`
+6. At the top of the screen, click the `Authorize` button, in `Value` paste the token text you copied and click the `Authorize` button, then close the modal by clicking `Close`
 7. Now you can access all other routes as they are authorized.
 
 </br>
@@ -166,8 +170,8 @@ _*Feedbacks são bem vindos.*_
 <hr/>
 
 ## Como rodar a aplicação?
-- O MySQL precisa estar rodando na sua máquina
-- ⚠️ Se estiver no Windows, pare o MySQL do Windows, pois usará o MySQL da sua distro linux através do WSL2
+- O MySQL precisa estar rodando na sua máquina <br>
+⚠️ Se estiver no Windows, pare o MySQL do Windows, pois usará o MySQL da sua distro linux através do WSL2
 - Clone o repositório: <br>
 `git clone git@github.com:prtpj1/project-blogs-api.git`
 - Acesse a pasta do projeto: <br>
@@ -191,20 +195,26 @@ _*Feedbacks são bem vindos.*_
 `npm start`
 
 Com o projeto rodando você poderá testar as rotas clicando no link do [Swagger](http://localhost:3000/api-docs/)
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Swagger_BlogsAPI.png?raw=true" alt="Tela do Swagger" />
 ⚠️ **Neste app a rota precisa de autenticação via token que é feita na própria rota do Swagger linkado acima, mas é preciso seguir alguns passos:**
-1. Abra a rota `POST/user/` e clique no botão `Try it out` <br>
-2. Preencha os campos com os dados do novo usuário (não precisam ser dados reais) <br>
-3. Clique no botão `Execute` <br>
-4. Se tudo correu bem, o seu usuário foi criado, você verá o código 201 e foi gerado o token de autorização. <br>
+1. Abra a rota `POST/user/` e clique no botão `Try it out`
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_01.png?raw=true" alt="Imagem para demonstrar como criar um novo usuário autorizado e poder utilizar o swagger" />
+2. Preencha os campos com os dados do novo usuário (não precisam ser dados reais)
+3. Clique no botão `Execute`
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_02.png?raw=true" alt="Imagem para demonstrar como criar um novo usuário autorizado e poder utilizar o swagger" />
+4. Se tudo correu bem, o seu usuário foi criado, você verá o código 201 e foi gerado o token de autorização.
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_03.png?raw=true" alt="Imagem para demonstrar como criar um novo usuário autorizado e poder utilizar o swagger" />
 O token deve ser algo parecido com este: 
 ```
     {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjo4LCJkaXNwbGF5TmFtZSI6IkZ1bGFubyBkYSBTaWx2YSIsImVtYWlsIjoiZnVsYW5vQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGh2elo2elE3eEtDLk1PZ2VKUjQ2RXV2Z3I2YmMyT2pLWnZkUnlNc2FrSUpISWMvN2VvUTEyIiwiaW1hZ2UiOiJ3d3cucGljdHVyZS5wbmcifSwiaWF0IjoxNzE4MzA5NDIwLCJleHAiOjE3MTgzOTU4MjB9.gRMp60cD1GSAZwGVaSsfSj2kVxt8_3ZydNvoCY3J22A"
     }
 ```
- Caso algo de errado, será exibido o código do erro e a mensagem de erro _*(nome muito curto, senha muito curta ou não numérica, etc...)*_ <br>
-5. Copie somente o texto que está entre aspas após `"token":`<br>
-6. No topo da tela clique no botão `Authorize`, em `Value` cole o texto do token que você copiou e clique no botão `Authorize` e feche o modal clicando em `Close`<br>
+ Caso algo de errado, será exibido o código do erro e a mensagem de erro _*(nome muito curto, senha muito curta ou não numérica, etc...)*_ 
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/swagger_example_04.png?raw=true" alt="Imagem para demonstrar como criar um novo usuário autorizado e poder utilizar o swagger" />
+
+5. Copie somente o texto que está entre aspas após `"token":`
+6. No topo da tela clique no botão `Authorize`, em `Value` cole o texto do token que você copiou e clique no botão `Authorize` e feche o modal clicando em `Close`
 7. Agora você pode acessar todas as outras rotas, pois já estão autorizadas.
 
 </br>
