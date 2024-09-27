@@ -1,6 +1,6 @@
 # 23º Projeto: Blogs API
 <p align="center">
-<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/23-BlogsAPI.jpg?raw=true" alt="Header" />
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Headers/23-BlogsAPI.jpg?raw=true" alt="Header" />
 <hr/>
 <p align="center">
 <a href="#project-description">Project Description</a> •
