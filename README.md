@@ -1,7 +1,8 @@
 # 23º Projeto: Blogs API
 <p align="center">
 <img src="https://github.com/prtpj1/prtpj1/blob/main/Headers/23-BlogsAPI.jpg?raw=true" alt="Header" />
-<hr/>
+
+---
 <p align="center">
 <a href="#project-description">Project Description</a> •
 <a href="#in-this-project-i-learned-and-put-into-practice">Learning</a> •
@@ -9,7 +10,8 @@
 <a href="#stacks">Stacks</a> •
 <a href="#how-to-run-the-application">How to run the application</a>
 </p>
-<hr/>
+
+---
 <p align="center">
 <a href="#descrição-do-projeto">Descrição do Projeto</a> •
 <a href="#nesse-projeto-aprendi-e-coloquei-em-prática">Aprendizado</a> •
@@ -17,20 +19,18 @@
 <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a> •
 <a href="#como-rodar-a-aplicação">Rodar a Aplicação</a>
 </p>
-<hr/>
 
+---
 ## Project Description
-I created this BackEnd project during my learning period at Trybe, where I developed an API and a database for content production for a blog.<br>
+I created this BackEnd project during my learning period at Trybe, where I developed an API and a database for content production for a blog.
 
 This is a NodeJS application that uses the Sequelize package to perform CRUD operations on posts.
 
 
-## In this project, I learned and put into practice:
-- Development of endpoints connected to the database following REST principles;
+## In this project, I learned and put into practice
+- Development of endpoints connected to the database following REST principles
 
-<hr/>
-
-## According to the project requirements designated by Trybe, I learned how to:
+## According to the project requirements designated by Trybe, I learned how to
 - ✅ Create migrations for the entities `User`, `Categories`, `BlogPosts` and `PostCategories`
 - ✅ Create the `User` model in `src/database/models/user.js` with defined properties
 - ✅ Create the `POST /login` endpoint
@@ -54,17 +54,14 @@ _*Note: In some projects, certain requirements were not completed due to the acc
 _*I haven't decided yet whether to leave it this way to demonstrate my progress during my learning or to complete the missing requirements from the course projects.*_
 _*Feedback is welcome.*_
 
-<hr/>
-
 ## Stacks
-### BackEnd:
+### BackEnd
 - Docker
 - Express
 - MySQL
 - Node.js
 
 <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="Docker Icon" /></a><a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/express2.png?raw=true" width="50" height="50" alt="Express Icon" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/mySQL2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
-<hr/>
 
 ## How to run the application?
 - MySQL must be running on your machine <br>
@@ -120,24 +117,18 @@ If something goes wrong, the error code and message will be displayed below ther
 6. At the top of the screen, click the `Authorize` button, in `Value` paste the token text you copied and click the `Authorize` button, then close the modal by clicking `Close`
 7. Now you can access all other routes as they are authorized.
 
-</br>
-</br>
-
 _*Note: If you have any difficulty with the instructions and want to provide feedback, send me a message*_
 
-<hr/>
-
+---
 ## Descrição do Projeto
 Fiz este projeto BackEnd durante meu período de aprendizagem na Trybe onde desenvolvi uma API e um banco de dados para a produção de conteúdo para um blog.<br>
 
 Esta é uma aplicação em NodeJS que usa o pacote sequelize para fazer um CRUD de posts.
 
-## Nesse projeto, aprendi e coloquei em prática:
-- Desenvolvimento de endpoints que foram conectados ao banco de dados seguindo os princípios do REST;
+## Nesse projeto, aprendi e coloquei em prática
+- Desenvolvimento de endpoints que foram conectados ao banco de dados seguindo os princípios do REST
 
-<hr/>
-
-## De acordo com os requisitos do projeto designados pela Trybe consegui desenvolver:
+## De acordo com os requisitos do projeto designados pela Trybe consegui desenvolver
 - ✅ Criar migrations para as entidades `User`, `Categories`, `BlogPosts` e `PostCategories`
 - ✅ Criar o modelo `User` em `src/database/models/user.js` com as propriedades definidas
 - ✅ Criar o endpoint `POST /login`
@@ -163,17 +154,15 @@ _*Ainda não decidi se é melhor deixar desta forma para demonstrar o meu progre
 
 _*Feedbacks são bem vindos.*_
 
-<hr/>
-
+---
 ## Tecnologias Utilizadas
-### BackEnd:
+### BackEnd
 - Docker
 - Express
 - MySQL
 - Node.js
 
 <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="Docker Icon" /></a><a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/express2.png?raw=true" width="50" height="50" alt="Express Icon" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/mySQL2.png?raw=true" width="50" height="50" alt="MySQL Icon" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/NodeJS2.png?raw=true" width="50" height="50" alt="NodeJS Icon" /></a>
-<hr/>
 
 ## Como rodar a aplicação?
 - O MySQL precisa estar rodando na sua máquina <br>
@@ -229,8 +218,5 @@ Caso algo de errado, será exibido o código do erro e a mensagem de erro _*(nom
 5. Copie somente o texto que está entre aspas após `"token":`
 6. No topo da tela clique no botão `Authorize`, em `Value` cole o texto do token que você copiou e clique no botão `Authorize` e feche o modal clicando em `Close`
 7. Agora você pode acessar todas as outras rotas, pois já estão autorizadas.
-
-</br>
-</br>
 
 _*OBS: Se tiver alguma dificuldade com as instruções e quiser dar um feedback me mande uma mensagem*_
